@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import SearchItem from '.Components/SearchItem'
+import SearchItem from '../SearchItem'
 
 import './index.css'
 
@@ -99,9 +99,6 @@ class searchBrowserHistory extends Component {
     this.setState({
       HistoryList: filteredUserData,
     })
-    if (HistoryList.length === 1) {
-      this.setState({isShow: true})
-    }
   }
 
   render() {
@@ -136,10 +133,10 @@ class searchBrowserHistory extends Component {
 
         <div className="app-container">
           <ul className="history-container">
-            {HistoryList.length === 0 ? (
+            {searchResult.length === 0 ? (
               <p className="error">There is no history to show</p>
             ) : (
-              HistoryList.map(eachHistory => (
+              searchResult.map(eachHistory => (
                 <SearchItem
                   key={eachHistory.id}
                   historyDetails={eachHistory}
