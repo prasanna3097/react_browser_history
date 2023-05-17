@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import searchItem from '.component/searchItem'
+import SearchItem from '.Components/SearchItem'
 
 import './index.css'
 
@@ -81,7 +81,6 @@ const initialHistoryList = [
 class searchBrowserHistory extends Component {
   state = {
     searchInput: '',
-    isShow: false,
     HistoryList: initialHistoryList,
   }
 
@@ -106,7 +105,7 @@ class searchBrowserHistory extends Component {
   }
 
   render() {
-    const {HistoryList, searchInput, isShow} = this.state
+    const {HistoryList, searchInput} = this.state
     const searchResult = HistoryList.filter(each =>
       each.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
@@ -137,11 +136,11 @@ class searchBrowserHistory extends Component {
 
         <div className="app-container">
           <ul className="history-container">
-            {searchResult.length === 0 ? (
+            {HistoryList.length === 0 ? (
               <p className="error">There is no history to show</p>
             ) : (
-              searchResult.map(eachHistory => (
-                <searchItem
+              HistoryList.map(eachHistory => (
+                <SearchItem
                   key={eachHistory.id}
                   historyDetails={eachHistory}
                   updateSearch={this.updateSearch}

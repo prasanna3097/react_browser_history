@@ -1,4 +1,4 @@
-import searchBrowserHistory from './component/searchBrowserHistory'
+import SearchBrowserHistory from './SearchBrowerHistory'
 
 import './App.css'
 
@@ -79,6 +79,6 @@ const initialHistoryList = [
   },
 ]
 // Replace your code here
-const App = () => <searchBrowserHistory />
+const App = () => <SearchBrowserHistory />
 
 export default App

@@ -1,6 +1,6 @@
 import './index.css'
 
-const searchItem = props => {
+const SearchItem = props => {
   const {historyDetails, deleteHistory} = props
   const {id, timeAccessed, logoUrl, title, domainUrl} = historyDetails
 
@@ -33,4 +33,4 @@ const searchItem = props => {
   )
 }
 
-export default searchItem
+export default SearchItem
