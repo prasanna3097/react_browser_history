@@ -1,9 +1,10 @@
 .header-container {
   background-color: #3367d6;
-  height: 12vh;
-  pad: 15px;
+  height: 10vh;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .app-logo-image {
   height: 30px;
@@ -20,6 +21,7 @@
   width: 400px;
   margin-bottom: 15px;
   margin-right: 200px;
+  margin-top: 5px;
 }
 .search-image {
   height: 30px;

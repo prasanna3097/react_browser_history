@@ -78,7 +78,7 @@ const initialHistoryList = [
   },
 ]
 
-class searchBrowserHistory extends Component {
+class BrowserHistory extends Component {
   state = {
     searchInput: '',
     HistoryList: initialHistoryList,
@@ -152,4 +152,4 @@ class searchBrowserHistory extends Component {
   }
 }
 
-export default searchBrowserHistory
+export default BrowserHistory
